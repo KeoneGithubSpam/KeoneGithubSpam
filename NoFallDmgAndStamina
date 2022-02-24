@@ -1,0 +1,26 @@
+local gmt = getrawmetatable(game)
+	setreadonly(gmt, false)
+	local oldNamecall = gmt.__namecall
+
+	gmt.__namecall = newcclosure(function(self, ...)
+		local Args = {...}
+		local method = getnamecallmethod()
+		if tostring(self) == "LowerStamina" and tostring(method) == "FireServer" then
+			Args[1] = 0
+			return self.FireServer(self, unpack(Args))
+		end
+		return oldNamecall(self, ...)
+	end)
+	local gmt = getrawmetatable(game)
+	setreadonly(gmt, false)
+	local oldNamecall = gmt.__namecall
+
+	gmt.__namecall = newcclosure(function(self, ...)
+		local Args = {...}
+		local method = getnamecallmethod()
+		if tostring(self) == "DamageSelf" and tostring(method) == "FireServer" then
+			Args[1] = 0
+			return self.FireServer(self, unpack(Args))
+		end
+		return oldNamecall(self, ...)
+	end)
