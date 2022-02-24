@@ -1,0 +1,11 @@
+for i, v in pairs(getgc(true)) do
+		if type(v) == "table" and rawget(v, "BaseRecoil") then
+			v.FireSpeed = 100000
+			print("Modified:" , v)
+			for ch,e in pairs(v) do
+				--print(ch,e)
+
+
+			end
+		end
+	end
