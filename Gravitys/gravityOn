@@ -1,0 +1,2 @@
+wait()
+game.workspace.Gravity = 090.2
