@@ -1,0 +1,14 @@
+Float_Height = "6"
+
+	local i=1
+	G=game;
+	_=wait;
+	p=G:GetService("Players").LocalPlayer.Character
+	p:FindFirstChild("Humanoid").HipHeight = Float_Height
+	_(1.5);
+	t=.4;
+	n=2;
+	for i=1,i do
+		repeat p:FindFirstChild("Humanoid").HipHeight=Float_Height-n _(t)p:FindFirstChild("Humanoid").HipHeight=Float_Height+n _(t) until
+		p:FindFirstChild("Humanoid").Health == 100
+	end
