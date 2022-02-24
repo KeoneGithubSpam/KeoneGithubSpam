@@ -1,0 +1,43 @@
+power = 24 -- change this to make it more or less powerful
+
+	game:GetService('RunService').Stepped:connect(function()
+		game.Players.LocalPlayer.Character.Head.CanCollide = false
+		game.Players.LocalPlayer.Character.UpperTorso.CanCollide = false
+		game.Players.LocalPlayer.Character.LowerTorso.CanCollide = false
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false
+	end)
+	wait(.1)
+	local bambam = Instance.new("BodyThrust")
+	bambam.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+	bambam.Force = Vector3.new(power,0,power)
+	bambam.Location = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+
+	game.StarterGui:SetCore("SendNotification", {
+		Title = "SPIN!"; -- Required. Has to be a string!
+		Text = "RESET CHARACTER FULLY TO STOP SPINNING"; -- Required. Has to be a string!
+		Icon = ""; -- Optional, defaults to "" (no icon)
+		Duration = 25; -- Optional, defaults to 5 seconds
+		Callback = bindableFunction; -- Optional, gets invoked with the text of the button the user pressed
+		Button1 = ""; -- Optional, makes a button appear with the given text that, when clicked, fires the Callback if it's given
+		Button2 = ""; -- Optional, makes another button appear with the given text that, when clicked, fires the Callback if it's given
+	})
+
+	game.StarterGui:SetCore("SendNotification", {
+		Title = "BY CANDYLEAN#2645"; -- Required. Has to be a string!
+		Text = ""; -- Required. Has to be a string!
+		Icon = ""; -- Optional, defaults to "" (no icon)
+		Duration = 25; -- Optional, defaults to 5 seconds
+		Callback = bindableFunction; -- Optional, gets invoked with the text of the button the user pressed
+		Button1 = ""; -- Optional, makes a button appear with the given text that, when clicked, fires the Callback if it's given
+		Button2 = ""; -- Optional, makes another button appear with the given text that, when clicked, fires the Callback if it's given
+	})
+
+	game.StarterGui:SetCore("SendNotification", {
+		Title = ""; -- Required. Has to be a string!
+		Text = ""; -- Required. Has to be a string!
+		Icon = ""; -- Optional, defaults to "" (no icon)
+		Duration = 25; -- Optional, defaults to 5 seconds
+		Callback = bindableFunction; -- Optional, gets invoked with the text of the button the user pressed
+		Button1 = ""; -- Optional, makes a button appear with the given text that, when clicked, fires the Callback if it's given
+		Button2 = ""; -- Optional, makes another button appear with the given text that, when clicked, fires the Callback if it's given
+	})
