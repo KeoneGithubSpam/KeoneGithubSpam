@@ -1,0 +1,4 @@
+local player = game.Players.LocalPlayer
+
+	player.CameraMaxZoomDistance = 9998
+	player.CameraMinZoomDistance = 5
